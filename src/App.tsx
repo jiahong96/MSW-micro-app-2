@@ -30,13 +30,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h2>Hybridapp A</h2>
-      <div className="container">
+    <div className="app-container">
+      <h2>Hybridapp B</h2>
+      <div className="list-container">
         {insurances.map((insurance) => (
           <div key={insurance.id} className="card">
             <h3>{insurance.name}</h3>
-            <p>{insurance.description}</p>
+            <p className="card-description">{insurance.description}</p>
           </div>
         ))}
       </div>
