@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "microApp1",
+      name: "microApp2",
       filename: "remoteEntry.js",
       exposes: {
         "./App": "./src/App",
@@ -23,7 +23,7 @@ export default defineConfig({
     cssCodeSplit: false,
   },
   server: {
-    port: 3001,
+    port: 3002,
     cors: true,
   },
   test: {

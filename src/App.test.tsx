@@ -5,7 +5,7 @@ import insuranceData from "./mocks/data/insurances.json";
 describe("App.tsx", () => {
   test("renders the app", () => {
     render(<App />);
-    expect(screen.getByText("Hybridapp A")).toBeInTheDocument();
+    expect(screen.getByText("Hybridapp B")).toBeInTheDocument();
   });
 
   test("renders insurance cards with title and description", async () => {
