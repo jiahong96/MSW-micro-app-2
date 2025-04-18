@@ -18,5 +18,25 @@
       "type": "partial",
       "details": "Partial coverage details"
     }
+  },
+  {
+    "id": 3,
+    "name": "Car Insurance",
+    "description": "Aliqua laboris excepteur incididunt occaecat. Excepteur laboris excepteur nostrud id. Adipisicing enim irure reprehenderit do. Nostrud laboris anim non esse.",
+    "amount": 1500,
+    "coverage": {
+      "type": "full",
+      "details": "Full coverage details"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Health Insurance",
+    "description": "Aliqua laboris excepteur incididunt occaecat. Excepteur laboris excepteur nostrud id. Adipisicing enim irure reprehenderit do. Nostrud laboris anim non esse.",
+    "amount": 3000,
+    "coverage": {
+      "type": "partial",
+      "details": "Partial coverage details"
+    }
   }
 ]
