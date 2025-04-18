@@ -34,7 +34,7 @@ function App() {
       <h2>Hybridapp B</h2>
       <div className="list-container">
         {insurances.map((insurance) => (
-          <div key={insurance.id} className="card">
+          <div key={insurance.id} className="card-b">
             <h3>{insurance.name}</h3>
             <p className="card-description">{insurance.description}</p>
           </div>
