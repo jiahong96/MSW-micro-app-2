@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Car Insurance",
+    "name": "House Insurance",
     "description": "Ea elit tempor qui eiusmod ullamco dolore tempor sunt. Veniam laboris dolor ipsum laborum quis sint. Eiusmod sit incididunt qui ut minim laborum dolor qui deserunt labore.",
     "amount": 1000,
     "coverage": {
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "name": "Travel Insurance",
+    "name": "Dog Insurance",
     "description": "Non non qui ea sit laboris tempor exercitation aliqua velit exercitation eiusmod incididunt. Occaecat consequat incididunt id laborum veniam exercitation laboris dolor aliquip. Velit dolore sunt ut ex ex. Eiusmod adipisicing magna quis excepteur dolore occaecat laborum eu excepteur dolor. Eu excepteur aute ex ullamco ex officia ex cillum irure tempor.",
     "amount": 2000,
     "coverage": {
