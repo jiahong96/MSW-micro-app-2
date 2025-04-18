@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest",
-    "serve": "npx serve dist --cors --listen 3001",
+    "serve": "npx serve dist --cors --listen 3002",
     "build": "tsc -b && vite build --watch",
     "lint": "eslint .",
     "preview": "vite preview"
