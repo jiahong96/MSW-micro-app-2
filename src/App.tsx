@@ -27,12 +27,9 @@ function App() {
       }
     }
 
-    // Registers MSW handlers using global MSW instance in production mode
-    if (import.meta.env.MODE === "production") {
-      initMSW().then(() => {
-        getInsuranceData();
-      });
-    }
+    initMSW().then(() => {
+      getInsuranceData();
+    });
   }, []);
 
   return (

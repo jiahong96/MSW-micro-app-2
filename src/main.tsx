@@ -2,14 +2,13 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import { localDevWorker } from "./msw.ts";
 
 async function enableMocking() {
   if (import.meta.env.MODE != "development") return;
 
-  if (!localDevWorker()) return;
+  const { worker } = await import("./mocks/browser");
 
-  return localDevWorker().start();
+  return worker.start();
 }
 
 enableMocking().then(() => {
