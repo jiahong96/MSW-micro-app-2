@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Insurance } from "./mocks/handlers.ts";
+import { appName } from "./constants.ts";
 
 // Registers MSW handlers using global MSW instance in production mode
 if (import.meta.env.MODE === "production") {
@@ -14,7 +15,11 @@ function App() {
     async function getInsuranceData() {
       const url = "/insurances";
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          headers: {
+            "x-top-appname": appName,
+          },
+        });
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
