@@ -2,11 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Insurance } from "./mocks/handlers.ts";
 import { appName } from "./constants.ts";
-
-// Registers MSW handlers using global MSW instance in production mode
-if (import.meta.env.MODE === "production") {
-  import("./msw.ts");
-}
+import { initMSW } from "./msw.ts";
 
 function App() {
   const [insurances, setInsurances] = useState<Insurance[]>([]);
@@ -31,7 +27,12 @@ function App() {
       }
     }
 
-    getInsuranceData();
+    // Registers MSW handlers using global MSW instance in production mode
+    if (import.meta.env.MODE === "production") {
+      initMSW().then(() => {
+        getInsuranceData();
+      });
+    }
   }, []);
 
   return (

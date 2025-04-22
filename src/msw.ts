@@ -1,6 +1,14 @@
+import { appName } from "./constants";
 import { handlers } from "./mocks/handlers";
 import { setupWorker } from "msw/browser";
 
-if (window.mswWorker) window.mswWorker.use(...handlers);
+export async function initMSW() {
+  if (window.mswWorker) {
+    await window.mswWorker.use(...handlers);
+    console.info(`[MSW] Handlers registered for ${appName}`);
+  }
+}
 
-export const localDevWorker = setupWorker(...handlers);
+export const localDevWorker = () => {
+  return setupWorker(...handlers);
+};
